@@ -1,5 +1,9 @@
 __pycache__
 entire_logs/*
+!entire_logs/.gitkeep
 entire_outputs/*
+!entire_outputs/.gitkeep
 new_logs/*
+!new_logs/.gitkeep
 new_outputs/*
+!new_outputs/.gitkeep
