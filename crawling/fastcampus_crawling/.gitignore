@@ -1,6 +1,5 @@
-tmp
-outputs/*
-scrapy_crawler
-old_tmp
 __pycache__
-old_entire_course.py
+entire_logs/*
+entire_outputs/*
+new_logs/*
+new_outputs/*
