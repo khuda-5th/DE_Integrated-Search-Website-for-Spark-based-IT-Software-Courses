@@ -1,3 +1,11 @@
+class FastcampusItem:
+    def __init__(self, categories=None):
+        self.categories = categories if categories is not None else []
+
+    def to_dict(self):
+        return {"categories": [category.to_dict() for category in self.categories]}
+
+
 class CategoryItem:
     def __init__(self, category_name=None, sub_categories=None):
         self.category_name = category_name
@@ -11,9 +19,6 @@ class CategoryItem:
             ],
         }
 
-    def __repr__(self):
-        return f"CategoryItem(category_name={self.category_name}, sub_categories={self.sub_categories})"
-
 
 class SubCategoryItem:
     def __init__(self, sub_category_name=None, courses=None):
@@ -25,9 +30,6 @@ class SubCategoryItem:
             "sub_category_name": self.sub_category_name,
             "courses": [course.to_dict() for course in self.courses],
         }
-
-    def __repr__(self):
-        return f"SubCategoryItem(sub_category_name={self.sub_category_name}, courses={self.courses})"
 
 
 class CourseItem:
@@ -72,9 +74,10 @@ class CourseItem:
             "accordion": self.accordion,
         }
 
-    def __repr__(self):
-        return (
-            f"CourseItem(title={self.title}, intro={self.intro}, badge={self.badge}, tags={self.tags}, "
-            f"course_img={self.course_img}, course_url={self.course_url}, regular_price={self.regular_price}, "
-            f"sale_price={self.sale_price}, summary={self.summary}), parts={self.parts}, accordion={self.accordion}"
-        )
+
+class NewCourseItems:
+    def __init__(self, new_courses=None):
+        self.new_courses = new_courses if new_courses is not None else []
+
+    def to_dict(self):
+        return {"new_courses": [course.to_dict() for course in self.new_courses]}
