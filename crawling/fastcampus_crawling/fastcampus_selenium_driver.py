@@ -16,7 +16,7 @@ class FastcampusSeleniumDriver:
         self.url = url
         self.options = webdriver.ChromeOptions()
         self.options.add_argument("--window-size=400,1200")
-        # self.options.add_argument("--headless")  # 브라우저 UI 없이 실행
+        self.options.add_argument("--headless")  # 브라우저 UI 없이 실행
         self.options.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
         )  # 에이전트 지정
