@@ -17,8 +17,8 @@ if not os.path.exists(log_dir):
 
 start_time = datetime.now()
 formatted_time = start_time.strftime("%y%m%d%H%M")
-LOG_NAME = f"{formatted_time}_fastcampus.log"
-OUTPUT_NAME = f"{formatted_time}_fastcampus"
+LOG_NAME = f"{formatted_time}_fastcampus_new.log"
+OUTPUT_NAME = f"{formatted_time}_fastcampus_new"
 
 # 로깅 설정
 logger = setup_logging(log_dir, LOG_NAME)
