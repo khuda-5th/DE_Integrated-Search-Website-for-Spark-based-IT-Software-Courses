@@ -1,22 +1,31 @@
 from fastcampus_selenium_driver import *
 from course_items import *
+from logger import *
+import os
+import json
+from datetime import datetime
 
 
 def save_json(path, file_name, data):
-    with open(f"{path}/{file_name}.json", "w", encoding="utf-8") as file:
+    if not os.path.exists(path):
+        os.makedirs(path)
+    with open(f"{path}/{file_name}", "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=4)
 
+
+# 로그 디렉토리 생성
+log_dir = "entire_logs"
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
 
 start_time = datetime.now()
 formatted_time = start_time.strftime("%y%m%d%H%M")
 LOG_NAME = f"{formatted_time}_fastcampus.log"
-OUTPUT_NAME = f"{formatted_time}_fastcampus.json"
+OUTPUT_NAME = f"{formatted_time}_fastcampus"
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler(f"entire_logs/{LOG_NAME}"), logging.StreamHandler()],
-)
+# 로깅 설정
+logger = setup_logging(log_dir, LOG_NAME)
+
 logging.info("Crawl Entire Courses Start")
 ###################################################################################################################
 
@@ -86,12 +95,25 @@ for category in list(category_url.keys()):
         # CategoryItem에 SubCategory 정보 추가
         category_item.sub_categories.append(subcategory_item)
 
+    # # 카테고리 json 저장
+    # save_json(
+    #     f"entire_outputs",
+    #     f"{OUTPUT_NAME}_{category_item.category_name.replace('/', '_')}.json",
+    #     category_item.to_dict(),
+    # )
+    # logging.info(
+    #     f"Save Json 'entire_outputs/{category_item.category_name}/{OUTPUT_NAME}_{category_item.category_name}.json'"
+    # )
+    logging.info(
+        "========================================================================================================"
+    )
     # 최종 데이터에 category_item 추가
-    output.categories.append(category_item.to_dict())
+    output.categories.append(category_item)
 ###################################################################################################################
 
 # 파일 저장
-save_json("entire_outputs", OUTPUT_NAME, output.to_dict())
+save_json("entire_outputs", f"{OUTPUT_NAME}_all.json", output.to_dict())
+logging.info(f"Save Json 'entire_outputs/{OUTPUT_NAME}_all.json'")
 
 end_time = datetime.now()
 time_spent = end_time - start_time
