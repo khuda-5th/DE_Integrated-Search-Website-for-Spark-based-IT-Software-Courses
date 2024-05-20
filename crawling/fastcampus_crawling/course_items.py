@@ -75,6 +75,52 @@ class CourseItem:
         }
 
 
+class NewCourseItem:
+    def __init__(
+        self,
+        title=None,
+        intro=None,
+        badge=None,
+        tags=None,
+        course_img=None,
+        new_course_img=None,
+        course_url=None,
+        regular_price=None,
+        sale_price=None,
+        summary=None,
+        parts=None,
+        accordion=None,
+    ):
+        self.title = title
+        self.intro = intro
+        self.badge = badge
+        self.tags = tags if tags is not None else []
+        self.course_img = course_img
+        self.new_course_img = new_course_img
+        self.course_url = course_url
+        self.regular_price = regular_price
+        self.sale_price = sale_price
+        self.summary = summary if summary is not None else []
+        self.parts = parts if parts is not None else []
+        self.accordion = accordion if accordion is not None else []
+
+    def to_dict(self):
+        return {
+            "title": self.title,
+            "intro": self.intro,
+            "badge": self.badge,
+            "tags": self.tags,
+            "course_img": self.course_img,
+            "new_course_img": self.new_course_img,
+            "course_url": self.course_url,
+            "regular_price": self.regular_price,
+            "sale_price": self.sale_price,
+            "summary": self.summary,
+            "parts": self.parts,
+            "accordion": self.accordion,
+        }
+
+
 class NewCourseItems:
     def __init__(self, new_courses=None):
         self.new_courses = new_courses if new_courses is not None else []

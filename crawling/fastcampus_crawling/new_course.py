@@ -1,22 +1,27 @@
 from fastcampus_selenium_driver import *
 from course_items import *
+from logger import *
+import os
 
 
 def save_json(path, file_name, data):
+    if not os.path.exists(path):
+        os.makedirs(path)
     with open(f"{path}/{file_name}.json", "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=4)
 
 
+log_dir = "new_logs"
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+
 start_time = datetime.now()
 formatted_time = start_time.strftime("%y%m%d%H%M")
-LOG_NAME = f"{formatted_time}_fastcampus.log"
-OUTPUT_NAME = f"{formatted_time}_fastcampus.json"
+LOG_NAME = f"{formatted_time}_fastcampus_new.log"
+OUTPUT_NAME = f"{formatted_time}_fastcampus_new"
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler(f"new_logs/{LOG_NAME}"), logging.StreamHandler()],
-)
+# 로깅 설정
+logger = setup_logging(log_dir, LOG_NAME)
 logging.info("Crawl New Courses Start")
 ###################################################################################################################
 url = "https://fastcampus.co.kr/new"
@@ -28,21 +33,21 @@ new_courses_elements = driver.parse_new_courses()
 new_course_items = NewCourseItems()
 cnt = 0
 for new_course_element in new_courses_elements:
-    course_item = CourseItem()
+    new_course_item = NewCourseItem()
     try:
         course_url = new_course_element.find_element(By.TAG_NAME, "a").get_attribute(
             "href"
         )
-        course_img = new_course_element.find_element(By.TAG_NAME, "img").get_attribute(
-            "src"
-        )
+        new_course_img = new_course_element.find_element(
+            By.TAG_NAME, "img"
+        ).get_attribute("src")
         # 강의 이외의 요소 예외 처리
         if "category" not in course_url and "new" not in course_url:
             # CourseItem에 데이터 추가
-            course_item.course_url = course_url
-            course_item.course_img = course_img
+            new_course_item.course_url = course_url
+            new_course_item.new_course_img = new_course_img
             # NewCourseItems에 데이터 추가
-            new_course_items.new_courses.append(course_item)
+            new_course_items.new_courses.append(new_course_item)
             cnt += 1
             logging.info(f"New Course: {cnt}. {course_url} Found")
         else:
@@ -81,7 +86,7 @@ for course in new_course_items.new_courses:
     course.accordion = course_accordion
     cnt += 1
 
-# TODO: course_title로 검색해서 강의 뱃지, 썸네일, 태그 등의 나머지 정보들 얻기
+# 강의 제목으로 검색
 cnt = 1
 for course in new_course_items.new_courses:
     course_title = course.title
@@ -96,6 +101,8 @@ for course in new_course_items.new_courses:
     course_title, course_intro = driver.parse_course_title_intro(target_course)
     # 강의 뱃지
     course_badge = driver.parse_course_badge(target_course)
+    # 강의 이미지
+    course_img = driver.parse_course_img(target_course)
     # 강의 태그들
     course_tags = driver.parse_course_tags(target_course)
     # Item에 추가
@@ -103,6 +110,7 @@ for course in new_course_items.new_courses:
     course.tags = course_tags
     course.title = course_title
     course.intro = course_intro
+    course.course_img = course_img
     cnt += 1
 
 
