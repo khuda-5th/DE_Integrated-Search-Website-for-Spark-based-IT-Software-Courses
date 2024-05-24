@@ -7,12 +7,16 @@
 # useful for handling different item types with a single interface
 # from itemadapter import ItemAdapter
 import json
-import codecs
+from datetime import datetime
+import os
 
 
 class InflearnPipeline:
+    TODAY = datetime.today().strftime('%y%m%d')
     def __init__(self):
-        self.file = codecs.open('test03-04.jl', 'w', encoding='utf-8') #크롤링 데이터를 저장할 파일 OPEN             
+        if not os.path.exists("entire"):
+            os.makedirs("data/inflearn/entire/raw")
+        self.file = open(f"data/inflearn/entire/raw/{self.TODAY}_inflearn_entire.json", 'w', encoding='utf-8')
         
     def process_item(self, item, spider):
         line = json.dumps(dict(item), ensure_ascii=False) + "\n" #Item을 한줄씩 구성        

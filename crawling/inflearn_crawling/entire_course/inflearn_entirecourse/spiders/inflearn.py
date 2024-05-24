@@ -1,5 +1,5 @@
 import scrapy
-from ..items import InflearnItem
+from Inflearn.items import InflearnItem
 
 class InflearnSpider(scrapy.Spider):
     name = "inflearn"

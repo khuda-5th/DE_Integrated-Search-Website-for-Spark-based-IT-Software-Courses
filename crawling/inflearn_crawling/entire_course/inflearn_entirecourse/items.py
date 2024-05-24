@@ -9,6 +9,7 @@ import scrapy
 class InflearnItem(scrapy.Item):
     
     category = scrapy.Field()
+    # category['sub_category'] = scrapy.Field()
     # sub_category_name = scrapy.Field()
     # title = scrapy.Field()
     # num_of_lecture = scrapy.Field()
