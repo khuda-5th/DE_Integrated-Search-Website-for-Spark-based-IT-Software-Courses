@@ -40,6 +40,8 @@ class CourseItem extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       fontSize: 16.0,
                     ),
+                    overflow: TextOverflow.ellipsis, // 생략 기호 추가
+                    maxLines: 1, // 최대 1줄로 제한
                   ),
                   SizedBox(height: 4.0),
                   Text('${course.disPrice}'),
