@@ -5,6 +5,8 @@ import 'course_item.dart';
 
 class CourseList extends StatelessWidget {
   final ApiService apiService = ApiService();
+  final List<Course> courses;
+  CourseList({required this.courses});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../models/course_model.dart';
+import '../screens/lecture_details_screen.dart';
 
 class CourseItem extends StatelessWidget {
   final Course course;
@@ -17,18 +18,25 @@ class CourseItem extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8.0),
       child: InkWell(
-        onTap: () => {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => LectureDetailsScreen(course: course),
+            ),
+          );
+        },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          CachedNetworkImage(
-            imageUrl: imageUrl,
-            placeholder: (context, url) => CircularProgressIndicator(),
-            errorWidget: (context, url, error) => Icon(Icons.error),
-            fit: BoxFit.cover,
-            height: 100,
-            width: double.infinity,
-          ),
+            CachedNetworkImage(
+              imageUrl: imageUrl,
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(Icons.error),
+              fit: BoxFit.cover,
+              height: 100,
+              width: double.infinity,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -36,13 +44,19 @@ class CourseItem extends StatelessWidget {
                 children: [
                   Text(
                     course.courseTitle,
+                    maxLines: 2,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16.0,
                     ),
+                    overflow: TextOverflow.ellipsis, // 생략 기호 추가
                   ),
                   SizedBox(height: 4.0),
-                  Text('${course.disPrice}'),
+                  Text(
+                    "${course.disPrice ?? course.regPrice ?? '월 27,147원'}",
+                    style: TextStyle(fontSize: 12.0),
+                    textAlign: TextAlign.center,
+                  ),
                   SizedBox(height: 4.0),
                   Text(
                     course.platformName,
@@ -50,6 +64,12 @@ class CourseItem extends StatelessWidget {
                       fontSize: 12.0,
                       color: Colors.grey[600],
                     ),
+                  ),
+                  SizedBox(height: 8.0),
+                  Text(
+                    '${course.platformId}',
+                    style: TextStyle(fontSize: 12.0),
+                    textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 8.0),
                   Wrap(
