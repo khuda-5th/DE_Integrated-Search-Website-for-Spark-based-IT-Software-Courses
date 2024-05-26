@@ -29,3 +29,16 @@
 
 
 ## 🤗 Members
+| 김건형 | 노명은 | 박상영 | 유혜지 |
+| :-: | :-: | :-: | :-: |
+| <img src='https://avatars.githubusercontent.com/u/60197194?v=4' height=130 width=130></img> |  <img src='https://avatars.githubusercontent.com/u/90135669?v=4' height=130 width=130></img> | <img src='https://avatars.githubusercontent.com/u/107484383?s=96&v=4' height=130 width=130></img> | <img src='https://avatars.githubusercontent.com/u/90139122?v=4' height=130 width=130></img> |
+| <a href="https://github.com/GU-0" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/NoMyeongEun" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/Imsyp" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/HyejiYu" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> |
+
+
+
+| 윤소은 | 이소연 | 한상진 | 허윤지 |
+| :-: | :-: | :-: | :-: |
+| <img src='https://avatars.githubusercontent.com/u/160216493?s=96&v=4' height=130 width=130></img> | <img src='https://avatars.githubusercontent.com/u/84007823?s=96&v=4' height=130 width=130></img> | <img src='https://avatars.githubusercontent.com/u/49024115?v=4' height=130 width=130></img> | <img src='https://avatars.githubusercontent.com/u/111333350?v=4' height=130 width=130></img> |
+| <a href="https://github.com/Younsoeun" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/soyeon-kk" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/eu2525" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/myeunee" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> |
+
+<br>
