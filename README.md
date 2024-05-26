@@ -32,7 +32,7 @@
 | 김건형 | 노명은 | 박상영 | 유혜지 |
 | :-: | :-: | :-: | :-: |
 | <img src='https://avatars.githubusercontent.com/u/60197194?v=4' height=130 width=130></img> |  <img src='https://avatars.githubusercontent.com/u/90135669?v=4' height=130 width=130></img> | <img src='https://avatars.githubusercontent.com/u/107484383?s=96&v=4' height=130 width=130></img> | <img src='https://avatars.githubusercontent.com/u/90139122?v=4' height=130 width=130></img> |
-| <a href="https://github.com/GU-0" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/NoMyeongEun" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/Imsyp" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/HyejiYu" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> |
+| <a href="https://github.com/g-hyeong" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/NoMyeongEun" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/Imsyp" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> | <a href="https://github.com/HyejiYu" target="_blank"><img src="https://img.shields.io/badge/GitHub-black.svg?&style=round&logo=github"/></a> |
 
 
 
