@@ -21,12 +21,14 @@
 <br>
 >다양한 IT 강의 플랫폼에서 제공하는 강의들을 한 곳에서 쉽게 검색하세요!
 >
-## 📌 Preview
+<br>
 
+## 📌 Preview
+<br>
 
 ## ⚙️ Service Architecture
 ![image](https://github.com/myeunee/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/0d854869-1365-43b9-a64c-dad1340e2d5a)
-
+<br>
 
 ## 🤗 Members
 | 김건형 | 노명은 | 박상영 | 유혜지 |
