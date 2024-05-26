@@ -1,4 +1,7 @@
 .env
+.DS_Store
+web\lib\utils\constants.py 
+
 # Miscellaneous
 *.class
 *.log
