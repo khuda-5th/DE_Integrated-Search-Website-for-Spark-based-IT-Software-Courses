@@ -57,9 +57,9 @@
 
 <br>
 
-### 2️⃣ Airflow DAG 구성을 통해 자동 크롤링
+### 2️⃣ Spark
 
-### 3️⃣ Airflow DAG 구성을 통해 자동 크롤링
+### 3️⃣ OpenSearch
 
 ## 🤗 Members
 | 김건형 | 노명은 | 박상영 | 유혜지 |
