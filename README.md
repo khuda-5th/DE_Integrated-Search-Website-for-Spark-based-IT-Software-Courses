@@ -48,7 +48,7 @@
 
 <br>
 
-### 1️⃣ Airflow DAG 구성을 통해 자동 크롤링
+### 1️⃣ Airflow DAG 구성을 통한 주기적인 크롤링
 
 ![image](https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/da9e9f66-980a-4525-a740-753ebb7c9355)
 
