@@ -42,6 +42,7 @@
 
 * **`목표`** : 선택의 다양성을 제공하는 동시에, 학습자에게 통합된 자료를 제공하자.
 
+<br>
 
 ## ⚙️ Service Architecture
 ![image](https://github.com/myeunee/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/0d854869-1365-43b9-a64c-dad1340e2d5a)
@@ -52,15 +53,30 @@
 
 ![image](https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/da9e9f66-980a-4525-a740-753ebb7c9355)
 
->- 신규 강의에 대한 정보를 가져오기 위해 Airflow로 주기적인 크롤링을 한다.
->- EC2 인스턴스를 생성한 후, 각 강의 사이트를 크롤링 및 전처리한 데이터를 S3에 업로드한다.
+>- 신규 강의에 대한 정보를 가져오기 위해 Airflow로 주기적인 크롤링
+>- EC2 인스턴스를 생성한 후, 각 강의 사이트를 크롤링 및 전처리한 데이터를 S3에 업로드
 
 <br>
 
-### 2️⃣ Spark
+### 2️⃣ Spark로 분산 처리
+![image](https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/c3690d8d-c7c9-437c-8c71-2c36348bc987)
+
+
+
+>- 대규모 데이터 처리용 통합 분석 엔진인 Apache Spark
+>- 데이터 정제, 태그 클러스터링, db와 같은 형태로 데이터프레임 생성 및 조인 연산의 효율적 수행
+>- PostgreSQL에 연결해 중복성을 체크하여 새로 업데이트된 정보만 추가
+
 <br>
 
 ### 3️⃣ OpenSearch
+![image](https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/f54b8d05-4057-47a9-a6c8-b1939f274b56)
+
+
+>- AWS에서 만든 오픈소스 검색 엔진인 OpenSearch
+>- 강의 검색 시 **일치**하는 검색 결과가 아닌, **연관**된 검색 결과를 추출
+>- **역색인**을 통해 RDB보다 유연하게 검색 가능
+
 <br>
 <br>
 
