@@ -25,6 +25,11 @@
 
 ## 📌 Preview
 <br>
+<영상>
+  
+>1. 강의의 구성 요소(내용, 리뷰)를 한 눈에 비교
+>2. 사용자의 강의 탐색 시간을 줄여 학습의 효율성을 높임
+>3. 가격 및 할인 혜택을 비교하여 합리적인 가격에 선택
 
 ## ⚙️ Service Architecture
 ![image](https://github.com/myeunee/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/0d854869-1365-43b9-a64c-dad1340e2d5a)
