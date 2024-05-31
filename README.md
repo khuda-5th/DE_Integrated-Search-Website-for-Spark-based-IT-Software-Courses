@@ -25,7 +25,9 @@
 
 ## 📌 Preview
 <br>
-<영상>
+
+![영상](https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/cb207750-ec27-4c38-9638-3f8560c4e28c)
+
   
 >1. 강의의 구성 요소(내용, 리뷰)를 한 눈에 비교
 >2. 사용자의 강의 탐색 시간을 줄여 학습의 효율성을 높임
