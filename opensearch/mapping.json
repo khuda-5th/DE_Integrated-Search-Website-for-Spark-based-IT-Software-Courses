@@ -1,0 +1,42 @@
+{
+    "fastcampus_mapping" : {
+        "mappings": { 
+                "properties": {
+                    "lectureTitle" : { "type" : "text" },
+                    "lectureDescription" : { "type" : "text" },
+                    "lectureTag" : { "type" : "keyword" },
+                    "lectureURL" : { "type" : "keyword", "index": false },
+                    "lectureSummary" : { "type" : "text"},
+                    "lecutreParts" : { "type" : "text"},
+                    "lectureAccordion" : { "type" : "text"}
+            }
+        }
+    },
+    "codeit_mapping" : {
+        "mappings": { 
+                "properties": {
+                    "lectureCategory" : { "type" : "keyword"},
+                    "lectrueSubCategory" : { "type" : "keyword"},
+                    "lectureTitle" : { "type" : "text" },
+                    "lectureSummary" : { "type" : "text" },
+                    "lectrueDifficulty" : { "type" : "keyword"},
+                    "lectureCurriculum" : { "type" : "text"},
+                    "lectureRoadmap" : {"type" : "text"},
+                    "lectureRecommend" : {"type" : "text"},
+                    "lectureLink" : {"type" : "keyword", "index": false }
+            }
+        }
+    },
+    "inflearn_mapping" : {
+        "mappings": {
+            "properties": {
+                "category_name": { "type": "text" },
+                "sub_category_name": { "type": "text" },
+                "course_title": { "type": "text"},
+                "course_tag": { "type": "keyword"},
+                "course_text": { "type": "text" },
+                "course_link": { "type" : "keyword" , "index" : false}
+            }
+        }
+    }
+}
