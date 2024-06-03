@@ -1,6 +1,6 @@
 # IT/소프트웨어 강의 통합 검색 사이트
 <div align="center">
-<img src="https://github.com/myeunee/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/0938eb9c-8f4e-4111-9e6d-ddc0c2d8b4a4" alt="IT/소프트웨어 강의 통합 검색 사이트" width="600"/>
+<img src="https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/66d67220-e4f0-4a75-b146-9d9fae3d8f3e" width="600"/>
   <br>
     <br>
 <p align="center">
@@ -26,7 +26,9 @@
 ## 📌 Preview
 <br>
 
-![영상](https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/cb207750-ec27-4c38-9638-3f8560c4e28c)
+<p align="center">
+  <img src="https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/945c9f1b-60d5-47bf-8f1e-1b61686217ea">
+</p>
 
   
 >1. 강의의 구성 요소(내용, 리뷰)를 한 눈에 비교
@@ -47,7 +49,8 @@
 <br>
 
 ## ⚙️ Service Architecture
-![image](https://github.com/myeunee/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/0d854869-1365-43b9-a64c-dad1340e2d5a)
+![image](https://github.com/khuda-5th/DE_Integrated-Search-Website-for-Spark-based-IT-Software-Courses/assets/111333350/4f7d0809-b685-4e41-a0f8-ff5da6335045)
+
 
 <br>
 
